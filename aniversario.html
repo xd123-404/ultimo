@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario Bri ♥</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico:400,700|Quicksand:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose: #e75480;
+            --rose-dark: #ad2c5f;
+            --bg: #fff6fb;
+            --paper: #ffe8f3;
+            --pink: #ff69b4;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            font-family: 'Quicksand', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .corazones {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url('corazones.gif');
+            background-size: cover;
+            opacity: 0.11;
+        }
+        .note {
+            background: var(--paper);
+            border: 2px solid var(--rose);
+            border-radius: 18px;
+            box-shadow: 0 6px 32px 0 rgba(231,84,128,0.12);
+            padding: 44px 32px 36px 32px;
+            max-width: 430px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .tulip {
+            width: 44px;
+            height: 44px;
+            display: block;
+            margin: 0 auto 10px auto;
+            filter: drop-shadow(0 0 10px #e7548032);
+            animation: sway 3s ease-in-out infinite;
+        }
+        @keyframes sway {
+            0%,100% { transform: rotate(-4deg);}
+            50% { transform: rotate(5deg);}
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: var(--rose);
+            margin-bottom: 12px;
+            font-size: 2.2em;
+            letter-spacing: 1.5px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #453f4a;
+            opacity: 0.91;
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+        .heart {
+            font-size: 2.8em;
+            color: var(--rose-dark);
+            animation: heartbeat 1.2s infinite;
+            margin-bottom: 12px;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1);}
+            15% { transform: scale(1.18);}
+            30% { transform: scale(0.93);}
+            45% { transform: scale(1.09);}
+            60% { transform: scale(0.97);}
+            75% { transform: scale(1.04);}
+        }
+        .dedicatoria {
+            font-family: 'Pacifico', cursive;
+            color: var(--rose-dark);
+            font-size: 1.08em;
+            opacity: 0.65;
+            margin-top: 14px;
+            margin-bottom: 0;
+        }
+        .button-row {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+        .btn {
+            background: var(--rose);
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 7px;
+            font-size: 1em;
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 1px 7px #e7548030;
+            transition: background 0.18s, transform 0.12s;
+        }
+        .btn:hover, .btn:focus {
+            background: var(--rose-dark);
+            transform: translateY(-2px) scale(1.045);
+        }
+        @media screen and (max-width: 600px) {
+            .note {
+                padding: 20px 7vw 20px 7vw;
+                max-width: 92vw;
+            }
+            h1 { font-size: 1.4em; }
+            .tulip { width: 30px; height: 30px; }
+            .heart { font-size: 1.7em; }
+            p { font-size: 0.97em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="corazones"></div>
+    <div class="note">
+        <svg class="tulip" viewBox="0 0 32 32" fill="none">
+            <ellipse cx="16" cy="22" rx="4" ry="9" fill="#a2d5a5"/>
+            <path d="M16 22 Q20 13 16 5 Q12 13 16 22Z" fill="#e75480"/>
+            <ellipse cx="16" cy="28.5" rx="1.7" ry="2.2" fill="#82b366"/>
+        </svg>
+        <h1>Feliz Aniversario</h1>
+        <div class="heart">&hearts;</div>
+        <p>
+            Cada día contigo es un capítulo hermoso en la historia de mi vida.<br>
+            Gracias por regalarme la magia de tu amor y tu risa.
+        </p>
+        <div class="dedicatoria">
+            Para mi Bri, mi tulipán favorito 🌷<br>
+            <span style="font-size:0.95em; color:#e75480; opacity:.7;">Te amo, hoy y siempre.</span>
+        </div>
+        <div class="button-row">
+            <button class="btn" onclick="location.href='index.html'">Inicio &rarr;</button>
+        </div>
+    </div>
+</body>
+</html>

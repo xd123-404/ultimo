@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bri ♥ | Último Acto de Amor</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico:400,700|Quicksand:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose: #e75480;
+            --rose-dark: #ad2c5f;
+            --lila: #e5d0ea;
+            --bg: #fff6fb;
+            --gray: #453f4a;
+            --green: #a2d5a5;
+            --yellow: #ffe6a7;
+            --shadow: 0 6px 32px 0 rgba(231,84,128,0.09);
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transition: background 0.4s;
+        }
+        .logo {
+            margin-top: 54px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            user-select: none;
+        }
+        .logo-text {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8em;
+            color: var(--rose);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            text-shadow: 0 2px 10px #fff3;
+        }
+        .heart {
+            color: var(--rose-dark);
+            font-size: 1.1em;
+            margin-left: 5px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1);}
+            15% { transform: scale(1.18);}
+            30% { transform: scale(0.93);}
+            45% { transform: scale(1.09);}
+            60% { transform: scale(0.97);}
+            75% { transform: scale(1.04);}
+        }
+        .desc {
+            margin-top: 12px;
+            color: var(--gray);
+            font-size: 1.13em;
+            text-align: center;
+            max-width: 370px;
+            opacity: 0.87;
+            letter-spacing: 0.2px;
+        }
+        .buttons {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 230px;
+            align-items: stretch;
+        }
+        .btn {
+            background: #fff;
+            color: var(--rose);
+            border: 1.5px solid var(--rose);
+            border-radius: 24px;
+            padding: 15px 0;
+            font-size: 1.12em;
+            font-family: inherit;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: 
+                background 0.2s, 
+                color 0.2s, 
+                border 0.18s,
+                transform 0.12s;
+            outline: none;
+        }
+        .btn:hover, .btn:focus {
+            background: var(--rose);
+            color: #fff;
+            border-color: var(--rose-dark);
+            transform: translateY(-3px) scale(1.035);
+        }
+        .btn.ultimo {
+            border-color: var(--gray);
+            color: var(--gray);
+            background: #f8f8f8;
+        }
+        .btn.ultimo:hover, .btn.ultimo:focus {
+            background: var(--gray);
+            color: #fff;
+            border-color: var(--rose);
+        }
+        .flowers {
+            margin-top: 56px;
+            display: flex;
+            gap: 22px;
+            justify-content: center;
+        }
+        .tulip-big {
+            width: 58px;
+            height: 58px;
+            filter: drop-shadow(0 2px 5px #e7548055);
+            transition: transform 0.24s;
+            will-change: transform;
+        }
+        .tulip-big:hover {
+            transform: scale(1.08) rotate(-4deg);
+        }
+        .dedicatoria {
+            margin-top: 36px;
+            font-family: 'Pacifico', cursive;
+            color: var(--rose-dark);
+            opacity: 0.65;
+            font-size: 1.13em;
+            text-align: center;
+            max-width: 400px;
+            letter-spacing: .5px;
+            line-height: 1.35;
+        }
+        /* Flotante */
+        .music-btn-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            background: var(--rose);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 6px 24px #e7548066;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            font-size: 1.15em;
+            padding: 13px 24px 13px 20px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            cursor: pointer;
+            transition: background 0.18s, box-shadow 0.14s, transform 0.12s;
+        }
+        .music-btn-float:hover, .music-btn-float:focus {
+            background: var(--rose-dark);
+            box-shadow: 0 8px 30px #e7548088;
+            transform: translateY(-2px) scale(1.035);
+        }
+        .music-btn-float svg {
+            width: 1.5em;
+            height: 1.5em;
+            fill: currentColor;
+        }
+        @media (max-width: 600px) {
+            .logo-text {
+                font-size: 1.5em;
+            }
+            .flowers {
+                margin-top: 32px;
+            }
+            .tulip-big {
+                width: 32px;
+                height: 32px;
+            }
+            .buttons {
+                width: 96vw;
+                min-width: 140px;
+                max-width: 280px;
+            }
+            .dedicatoria {
+                font-size: .97em;
+            }
+            .music-btn-float {
+                right: 8px;
+                bottom: 8px;
+                font-size: 1em;
+                padding: 10px 15px 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <!-- Tulip SVG (minimal & stylized) -->
+        <svg class="tulip" style="width:38px;height:38px" viewBox="0 0 32 32" fill="none">
+            <ellipse cx="16" cy="22" rx="4" ry="9" fill="#a2d5a5"/>
+            <path d="M16 22 Q20 13 16 5 Q12 13 16 22Z" fill="#e75480"/>
+        </svg>
+        <span class="logo-text">Bri<span class="heart">♥</span></span>
+    </div>
+    <div class="desc">
+        Mi último acto de amor para ti. Un rincón donde todo lo que sentí y creé, vive y florece sólo por ti.
+    </div>
+    <div class="buttons">
+        <button class="btn" onclick="location.href='carta.html'">Carta</button>
+        <button class="btn" onclick="location.href='flores.html'">Flores</button>
+        <button class="btn" onclick="location.href='aniversario.html'">Aniversario</button>
+        <button class="btn ultimo" onclick="location.href='ultimo.html'">Último</button>
+    </div>
+    <div class="flowers">
+        <!-- Minimal & colorful tulip SVGs -->
+        <svg class="tulip-big" viewBox="0 0 32 32" fill="none">
+            <ellipse cx="16" cy="22" rx="4" ry="9" fill="#a2d5a5"/>
+            <path d="M16 22 Q20 13 16 5 Q12 13 16 22Z" fill="#e75480"/>
+            <ellipse cx="16" cy="28.5" rx="1.7" ry="2.2" fill="#82b366"/>
+        </svg>
+        <svg class="tulip-big" viewBox="0 0 32 32" fill="none">
+            <ellipse cx="16" cy="22" rx="4" ry="9" fill="#ffe6a7"/>
+            <path d="M16 22 Q20 13 16 5 Q12 13 16 22Z" fill="#ffb347"/>
+            <ellipse cx="16" cy="28.5" rx="1.7" ry="2.2" fill="#e2b007"/>
+        </svg>
+        <svg class="tulip-big" viewBox="0 0 32 32" fill="none">
+            <ellipse cx="16" cy="22" rx="4" ry="9" fill="#e5d0ea"/>
+            <path d="M16 22 Q20 13 16 5 Q12 13 16 22Z" fill="#b37ee2"/>
+            <ellipse cx="16" cy="28.5" rx="1.7" ry="2.2" fill="#9370b8"/>
+        </svg>
+    </div>
+    <div class="dedicatoria">
+        Siempre serás mi flor más bonita.<br>
+        <span style="font-size:0.9em; color:#e75480; opacity:.7;">Te amo, Bri.</span>
+    </div>
+    <!-- Botón flotante de música -->
+    <button class="music-btn-float" id="music-btn" onclick="toggleMusic()" aria-label="Reproducir música">
+        <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+        <span id="music-text">Reproducir música</span>
+    </button>
+    <audio id="bg-music" src="wwd.mp3juice.blog - Mora, C. Tangana - DROGA (Video Oficial) LO MISMO DE SIEMPRE (320 KBps).mp3" preload="auto"></audio>
+    <script>
+        // Música flotante
+        const audio = document.getElementById('bg-music');
+        const btn = document.getElementById('music-btn');
+        const txt = document.getElementById('music-text');
+        const playIcon = document.getElementById('icon-play');
+        const pauseIcon = document.getElementById('icon-pause');
+
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.volume = 0.5;
+                audio.play();
+                isPlaying = true;
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "";
+                txt.textContent = "Pausar música";
+            } else {
+                audio.pause();
+                isPlaying = false;
+                playIcon.style.display = "";
+                pauseIcon.style.display = "none";
+                txt.textContent = "Reproducir música";
+            }
+        }
+
+        // Si el usuario ya interactuó en la página, permite autoplay al volver a dar play
+        document.addEventListener('DOMContentLoaded', () => {
+            // Opcional: Iniciar con el botón parpadeando si no suena
+            if(audio.paused){
+                btn.animate([
+                    { boxShadow: '0 6px 24px #e7548088' },
+                    { boxShadow: '0 8px 32px #e75480bb' },
+                    { boxShadow: '0 6px 24px #e7548088' }
+                ], {
+                    duration: 1200,
+                    iterations: 2
+                });
+            }
+        });
+    </script>
+</body>
+</html>
